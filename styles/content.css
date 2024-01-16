@@ -1,0 +1,65 @@
+.hero {
+  object-fit: cover;
+  width: 100%;
+  height: 30vh;
+  object-position: center 50%;
+}
+
+.title-h1 {
+  font-size: 40px;
+}
+
+.text {
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.desc-list {
+  list-style-position: inside;
+  margin-top: 0;
+  padding: 0px;
+}
+
+.listStyle-none {
+  list-style: none;
+}
+
+.desc-item {
+  line-height: 1.3;
+}
+
+.desc-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.marginT-none {
+  margin-top: 0;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.picture {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  margin-bottom: 30px;
+}
+
+.figure-margin {
+  margin: 0 0 30px 0;
+}
+
+.blockquote {
+  margin: 0 0 16px 0;
+}
+
+.blockquote-left {
+  border-left: 3px solid black;
+  padding-left: 14px;
+}
+

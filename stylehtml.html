@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>Code Style HTML</title>
+</head>
+<body>
+  <article>
+      <img class="hero" src="images/html.jpeg" alt="Закрывающийся тег на розово-голубом фоне">
+    <div class="container">
+      <h1 class="title-h1" lang="en">Code Style HTML</h1>
+      <section>
+        <h2 class="marginT-none" lang="en">!DOCTYPE</h2>
+        <p class="text">
+          В начале страницы обязательно должен быть указан актуальный &lt;<span>!DOCTYPE</span> html&gt;, 
+          чтобы работать в режиме стандартов и последовательного рендеринга элементов в каждом доступном браузере.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="marginT-none">Атрибут локализации</h2>
+        <p class="text">
+          Для элемента &lt;<span lang="en">html</span>&gt; в атрибуте <span lang="en">lang</span> должен указываться соответствующий язык документа.
+          Это нужно для правильной работы синтеза речи, для переводчиков и поисковиков.
+        </p>
+
+        <section>
+          <h3 class="marginT-none">Вырезка из спецификации <span lang="en">HTML</span>5</h3>
+          <div class="blockquote-left">
+            <blockquote class="blockquote">
+              Разработчикам рекомендуется указывать атрибут языка в начале <span lang="en">html</span> файла, тем самым указывая на принадлежность языка документа. 
+              Это способствует инструментам генерации голоса определить то, какое произношение использовать, а инструментам перевода определить каким правилам придерживаться и так далее. 
+            </blockquote>
+          </div>
+        </section>
+
+      </section>
+
+      <section>
+        <h2 class="marginT-none">Кодировка символов документа</h2>
+        <p class="text">
+          Кодировка символов на странице всегда должна быть явно указана, 
+          чтобы обеспечить корректное отображение текста.
+        </p>
+
+        <figure class="margin-none">
+          <figcaption class="caption">
+            Для Кириллицы нужно использовать <span lang="en">UTF</span>-8 кодировку, 
+            убедитесь что ваш документ так же имеет кодировку <span lang="en">UTF</span>-8
+          </figcaption>
+          <img class="picture" src="images/stylehtml/utf8.png" alt="На картинки показано что в meta теге кодировка прописана utf-8 и сам документ имеет кодировку utf-8" width="534" height="390">
+        </figure>
+      </section>
+
+      <section>
+        <h2>Базовый синтаксис</h2>
+        <p class="text">Теги и их атрибуты пишутся строчными буквами.</p>
+        <p class="text">Для значений атрибутов всегда используются двойные кавычки.</p>
+        
+        <figure class="margin-none">
+          <figcaption class="caption">
+            Для отступов у вложенных элементов используется отступ в 2 пробела (или табуляция размером 2 пробела).
+          </figcaption>
+          <img class="picture" src="images/stylehtml/tab.png" alt="В разметке html показано что отступы должны иметь два пробела" width="698" height="437">
+        </figure>
+      </section>
+
+      <section>
+        <h2>Закрывающие теги</h2>
+        <p class="text">
+          Закрывающий слеш у одиночных тегов (&lt;<span lang="en">img</span>&gt;, &lt;<span>br</span>&gt; и другие) не ставится.
+        </p>
+        <p class="text">
+          В остальных случаях , как &lt;<span lang="en">body</span>&gt;&lt;/<span lang="en">body</span>&gt;, &lt;<span lang="en">p</span>&gt;&lt;/<span lang="en">p</span>&gt; или &lt;<span lang="en">li</span>&gt;&lt;/<span lang="en">li</span>&gt;, обязателен закрывающий тег.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="marginT-none">Подключение стилей</h2>
+        <p class="text">Файл стилей подключается с помощью тега &lt;<span lang="en">link</span>&gt; внутри тега &lt;<span lang="en">head</span>&gt;.</p>
+        <p class="text">
+          Обязательный атрибут <span lang="en">rel</span> - со значением <span lang="en">stylesheet</span>, иначе браузер не поймет что вы подключили.
+        </p>
+
+        <figure class="margin-none">
+          <figcaption class="caption">
+            Атрибут <span lang="en">type="text/css”</span> писать не нужно в современной версии <span lang="en">HTML</span>
+          </figcaption>
+          <img class="picture" src="images/stylehtml/style.png" alt="Показано что тег link имеет только атрибуты rel и href, атрибута type нет" width="647" height="251">
+        </figure>
+      </section>
+
+      <section>
+        <h2>Атрибуты</h2>
+        <p class="text">Атрибут класса у <span lang="en">HTML</span>-элементов пишется первым.</p>
+        <p class="text">
+          Так проще распознать его, остальные атрибуты можно указывать в любом порядке, 
+          но желательно чтобы их порядок от элемента к элементу сохранялся.
+        </p>
+        <p class="text">
+          Для логических атрибутов, таких как <span lang="en">checked</span>, <span lang="en">disabled</span>, <span lang="en">required</span> и тд, значение не указывается
+        </p>
+      </section>
+
+      <section>
+        <h2 class="marginT-none"><span lang="en">ALT</span> - атрибут</h2>
+        <p class="text">
+          Обязательно нужно указывать атрибут <span lang="en">alt</span> у тега <span lang="en">img</span>, 
+          чтобы было чем его "заменить" если вдруг изображение не загрузилось
+        </p>
+        <p class="text">
+          Так же значение <span lang="en">alt</span> атрибута очень важно, для людей использующих вспомогательные технологии, 
+          например экранные читалки, они не видят интерфейс, а "читают" сайты с помощью экранного диктора. 
+          Программа зачитывает для них <span lang="en">alt</span> атрибут чтобы было понятно что на изображении.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="marginT-none">Валидность <span lang="en">HTML</span></h2>
+        <p class="text">Документ должен проходить проверку на валидность <span lang="en">HTML</span>.</p>
+        <p class="text">Для проверки используется валидатор <span lang="en">w3c</span></p>
+        <a href="https://validator.w3.org/#validate_by_input" target="_blank">https://validator.w3.org/#validate_by_input</a>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
